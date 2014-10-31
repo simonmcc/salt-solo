@@ -1,0 +1,3 @@
+
+gwibber:
+  pkg.installed    
