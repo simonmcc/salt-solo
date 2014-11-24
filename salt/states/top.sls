@@ -1,5 +1,6 @@
 base:
   '*':
+    - base
     - google_chrome
     - dropbox
     - hipchat

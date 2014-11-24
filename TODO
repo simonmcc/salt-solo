@@ -1,0 +1,7 @@
+# http://www.noobslab.com/2014/04/thingstweaks-to-do-after-install-of.html
+#
+
+wget -q -O - https://fixubuntu.com/fixubuntu.sh|bash
+
+gsettings set com.canonical.desktop.interface scrollbar-mode normal
+

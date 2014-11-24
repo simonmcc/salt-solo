@@ -10,11 +10,5 @@ build-essential:
 vim:
   pkg.installed    
 
-vim:
-  pkg.installed    
-
-vim:
-  pkg.installed    
-
 vim-gnome:
   pkg.installed    
