@@ -1,3 +1,4 @@
+#!/bin/bash
 
 
 SALT_BOOTSTRAP="https://raw.githubusercontent.com/saltstack/salt-bootstrap/stable/bootstrap-salt.sh"
@@ -8,7 +9,7 @@ function install_salt {
 	if [ -z "${SALT_CALL}" ]
 	then
 		wget -O install_salt.sh https://bootstrap.saltstack.com
-		sudo sh install_salt.sh -X 
+		sudo sh install_salt.sh -X
 	fi
 }
 

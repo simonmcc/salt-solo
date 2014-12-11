@@ -5,3 +5,7 @@ wget -q -O - https://fixubuntu.com/fixubuntu.sh|bash
 
 gsettings set com.canonical.desktop.interface scrollbar-mode normal
 
+
+# OpenVPN support on Mint Linux
+apt-get install network-manager-openvpn-gnome
+

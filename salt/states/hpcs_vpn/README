@@ -1,0 +1,53 @@
+======================
+HPCS VPN for Linux x64
+======================
+
+Scripts / binaries for establishing HPCS Juniper VPN connectivity, authenticating with an MFA token, from a Linux x64 command-line.  No Java required.
+
+Tested on up-to-date Ubuntu 12.04 and 13.04 x64 and Fedora 19 x64 base installs.
+
+For HPCS-internal distribution and use only.
+
+
+Installation / Usage
+--------------------
+
+1. Clone this git repository, or download and unpack the tarball.  In either case, an hpcs_vpn directory should be created.  Change into that directory, and verify that it contains files including this README, hpcs_useast.sh, hpcs_uswest.sh, hpcs_certupate.sh, juniperncprompt.py, libncui.py, ncdiag, ncsvc, and ncui.
+
+2. Install required packages:
+    Ubuntu 12.04 / 13.04: 
+        # apt-get install python-elementtidy libc6:i386 zlib1g:i386
+    Fedora 19 (Python dependencies elementtidy and elementtree installed from source at http://effbot.org/downloads):
+        # yum install glibc.i686 zlib.i686 python-devel python-pexpect
+
+3. Set root ownership/setuid for ncui and ncsvc binaries:
+    # chown root:root ncui ncsvc
+    # chmod 4755 ncui ncsvc
+
+4. Update VPN endpoint SSL certs (optional, current versions are included in archive):
+    $ ./hpcs_certupdate.sh
+
+5. Run relevant script for required VPN endpoint (hpcs_uswest.sh or hpcs_useast.sh) and follow prompts. 'Secondary password' is the value from your token.
+
+6. Look for a new 'tun0' network interface to confirm connectivity.
+
+
+Troubleshooting
+---------------
+
+The Python script (juniperncprompt.py) that makes HTTPS calls to establish an authenticated session writes seemingly-erronenous responses to /tmp/juniperncprompt_error.html.
+
+The Juniper client components log to ~/.juniper_networks/network_connect/ (ncsvc.log and ncui.log).  If the scripts appear to connect and then disconnect after several seconds, check these logs for indications that ncsvc root/setuid ownership/flags are not set as required.
+
+Migration to some other Linux distribution, or dealing with changes in the core Ubuntu libraries, may be as straightforward as rebuilding the ncui binary.  The distributed build was created in Ubuntu 13.04 (gcc-multilib package installed, along with :i386 library dependencies noted above) with:
+    $ gcc -m32 -Wl,-rpath,'$ORIGIN' -Wl,-rpath,/usr/lib32 -o ncui libncui.so 
+
+
+Sources
+-------
+Base juniperncprompt.py script customized somewhat from original at:
+ - http://www.ctctlabs.com/index.php/blog/detail/juniper_networks_network_connect_securid_and_64_bit_linux/
+ - https://github.com/crimsonknave/juniperncprompt
+
+Archive includes licensed Juniper client components intended for internal HPCS use only.
+

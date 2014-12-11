@@ -5,3 +5,4 @@ base:
     - dropbox
     - hipchat
     - gwibber
+    - hpcs_vpn
