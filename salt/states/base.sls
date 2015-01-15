@@ -2,13 +2,16 @@
 
 
 git:
-  pkg.installed    
+  pkg.installed
 
 build-essential:
-  pkg.installed    
+  pkg.installed
 
 vim:
-  pkg.installed    
+  pkg.installed
 
 vim-gnome:
-  pkg.installed    
+  pkg.installed
+
+screen:
+  pkg.installed
