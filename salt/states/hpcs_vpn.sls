@@ -34,6 +34,7 @@
 {% for script in scripts %}
 {{ script }}:
   file.managed:
+    - replace: False
     - mode: 4755
     - require:
       - file: /opt/hpcs_vpn
@@ -46,6 +47,7 @@
 {% for binary in binaries %}
 {{ binary }}:
   file.managed:
+    - replace: False
     - user: root
     - group: root
     - mode: 4755
