@@ -27,7 +27,10 @@
       - group
       - mode
 
-{% set scripts = ["/opt/hpcs_vpn/hpcs_certupdate.sh", "/opt/hpcs_vpn/hpcs_useast.sh", "/opt/hpcs_vpn/hpcs_uswest.sh"] %}
+{% set scripts = ["/opt/hpcs_vpn/hpcs_certupdate.sh",
+                  "/opt/hpcs_vpn/hpcs_auto.sh",
+                  "/opt/hpcs_vpn/hpcs_useast.sh",
+                  "/opt/hpcs_vpn/hpcs_uswest.sh"] %}
 {% for script in scripts %}
 {{ script }}:
   file.managed:
