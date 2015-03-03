@@ -8,3 +8,4 @@ base:
     - hipchat
     - gwibber
     - hpcs_vpn
+    - ssb

@@ -1,0 +1,5 @@
+echo "xgamma -gamma .6" >> ~/.xsessionrc
+
+
+wget http://linuxcoe.corp.hp.com/LinuxCOE/HPCOE/current/packages/DEBS/hpitinventory.all.deb
+dpkg -i hpinventory.all.deb
