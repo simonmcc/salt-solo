@@ -11,3 +11,4 @@ base:
     - hp_ca
     - hpcs_vpn
     - ssb
+    - notifyosd
