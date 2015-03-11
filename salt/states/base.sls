@@ -26,5 +26,8 @@ notifyosdconfig:
 git-review:
   pkg.installed
 
+openssh-server:
+  pkg.installed
+
 # sudo apt-get install gnupg-agent
 #
