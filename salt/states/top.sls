@@ -7,6 +7,7 @@ base:
     - vagrant
     - hipchat
     - gwibber
-    - hpcs_vpn
+    - hp_corp_vpn
     - hp_ca
+    - hpcs_vpn
     - ssb
