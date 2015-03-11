@@ -12,12 +12,16 @@
 
 # Update /etc/ca-certificates
 # Aye, salt has file.sed, but I can't make it work in this case
-echo "hpca2ssG2_ns.crt" >> /etc/ca-certificates.conf:
+addhpcs2cacertifcates:
   cmd:
     - run
+    - name: echo "hpca2ssG2_ns.crt" >> /etc/ca-certificates.conf
     - unless: grep ^hpca2ssG2_ns.crt /etc/ca-certificates.conf
 
 # and regenerate /etc/ssl/certs/
 update-ca-certificates:
-  cmd.run:
+  cmd.watch:
     - order: last
+    - watch:
+      - file: /usr/share/ca-certificates/hpca2ssG2_ns.crt
+      - cmd: addhpcs2cacertifcates
