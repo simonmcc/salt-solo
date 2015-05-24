@@ -12,3 +12,4 @@ base:
     - hpcs_vpn
     - ssb
     - notifyosd
+    - ddclient
