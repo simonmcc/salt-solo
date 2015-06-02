@@ -1,0 +1,9 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=Evernote Web
+Exec=/opt/google/chrome/google-chrome --app=https://www.evernote.com/Home.action
+Icon=/home/mccartsi/.icons/Evernote.png
+StartupWMClass=www.evernote.com__Home.action

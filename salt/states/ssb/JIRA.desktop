@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=JIRA
+Exec=/opt/google/chrome/google-chrome "--app=http://jira.hpcloud.net/secure/RapidBoard.jspa?rapidView=407&useStoredSettings=true" --user-data-dir=/home/mccartsi/.config/google-chrome-jira
+Icon=/home/mccartsi/.icons/JIRA.png

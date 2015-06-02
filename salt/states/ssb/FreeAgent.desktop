@@ -1,0 +1,7 @@
+[Desktop Entry]
+Version=1.0
+Terminal=false
+Type=Application
+Name=FreeAgent
+Exec=/opt/google/chrome/google-chrome "--app=https://jdr.freeagent.com/overview" --user-data-dir=/home/mccartsi/.config/google-chrome-jdr-fa
+Icon=/home/mccartsi/.icons/FreeAgent.png
