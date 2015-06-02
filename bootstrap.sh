@@ -10,9 +10,9 @@ function install_salt {
 	then
 		wget -q -O- "http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0x4759FA960E27C0A6" | sudo apt-key add -
 		wget -O install_salt.sh https://bootstrap.saltstack.com
-		sudo sh install_salt.sh -X
+		sudo -E sh install_salt.sh -X
 	fi
 }
 
 install_salt
-sudo salt-call --file-root=salt/states --local --log-level=debug state.highstate
+sudo -E salt-call --file-root=salt/states --local --log-level=debug state.highstate

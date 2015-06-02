@@ -19,12 +19,12 @@ screen:
 expect:
   pkg.installed
 
-# sudo add-apt-repository ppa:amandeepgrewal/notifyosdconfig
-notifyosdconfig:
-  pkg.installed
-
 git-review:
   pkg.installed
 
-# sudo apt-get install gnupg-agent
-#
+openssh-server:
+  pkg.installed
+
+
+gnupg-agent:
+  pkg.installed
