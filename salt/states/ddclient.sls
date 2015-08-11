@@ -39,4 +39,5 @@ ddclient:
         protocol=dyndns2
         server=members.dyndns.org
         # Dynamic DNS hosts
-        mccartsi-eb9470.selfip.net
+        {{ grains['nodename'] }}.selfip.net
+        #mccartsi-eb9470.selfip.net
