@@ -18,6 +18,7 @@ function install_salt {
 SALT_CALL=$(which salt-call)
 	if [ -z "${SALT_CALL}" ]
 	then
+		sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys B9316A7BC7917B12
 		wget -q -O- "http://keyserver.ubuntu.com:11371/pks/lookup?op=get&search=0x4759FA960E27C0A6" | sudo apt-key add -
 		INSTALL_SALT_SH="/tmp/${$}-install_salt.sh"
 		wget -O ${INSTALL_SALT_SH} ${SALT_BOOTSTRAP}
