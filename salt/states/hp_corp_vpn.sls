@@ -3,6 +3,10 @@
 network-manager-openvpn-gnome:
   pkg.installed
 
-/tmp/hp-corp.ovpn:
+/opt/hp-corp:
+  file.directory
+
+
+/opt/hp-corp/hp-corp.ovpn:
   file.managed:
     - source: salt://hp-corp.ovpn
