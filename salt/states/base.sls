@@ -25,5 +25,6 @@ git-review:
 openssh-server:
   pkg.installed
 
-# sudo apt-get install gnupg-agent
-#
+
+gnupg-agent:
+  pkg.installed
